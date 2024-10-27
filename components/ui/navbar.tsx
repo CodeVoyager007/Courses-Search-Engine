@@ -18,7 +18,7 @@ const SlideTabs: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="relative pt-10">
       <div className="md:hidden flex justify-end p-4">
         <button onClick={() => setIsOpen(!isOpen)} className="text-black">
           ☰

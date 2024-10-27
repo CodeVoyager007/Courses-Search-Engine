@@ -14,17 +14,16 @@ export default function ContactPage() {
   });
   const [typedText, setTypedText] = useState("");
 
-  // Use useMemo to memoize phrases
+  
   const phrases = useMemo(() => [
     "❓ Have Questions?",
     "✨ Want to give suggestions.",
     "🎉 Want to know more about any course.",
     "🚀 Feel free to reach out!",
-  ], []); // Empty dependency array to ensure stability
-
-  const typingDelay = 100; // Typing delay
-  const deletingDelay = 50; // Deleting delay
-  const pauseBeforeDeleting = 1000; // Pause before deleting
+  ], []); 
+  const typingDelay = 100; 
+  const deletingDelay = 50; 
+  const pauseBeforeDeleting = 1000; 
 
   useEffect(() => {
     let currentPhraseIndex = 0;
@@ -60,12 +59,11 @@ export default function ContactPage() {
       }
     };
 
-    // Start the typing effect
     typeText();
 
-    // Cleanup function to clear timeout on component unmount
+  
     return () => clearTimeout(timeoutId);
-  }, [phrases]); // Now, phrases is stable and does not change between renders
+  }, [phrases]); 
 
   const handleChange = (e: { target: { name: string; value: string } }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -80,13 +78,13 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-gradient-to-r from-[#A3EBB1] to-[#21B6A8] text-black dark:bg-gradient-to-r dark:from-[#3A3A3A] dark:to-[#5A5A5A] relative">
-      {/* Sidebar with Typewriter Content */}
+      
       <div className="p-6 flex flex-col justify-center items-center text-center">
         <h2 className="text-7xl font-serif mb-4 text-white">Contact Us</h2>
         <p className="text-xl font-handwritten text-white">{typedText}</p>
       </div>
 
-      {/* Main Content */}
+     
       <div className="p-6 flex items-center justify-center">
         <div className="max-w-lg w-full space-y-8 bg-white dark:bg-[#4A4A6A] rounded-lg shadow-lg p-6">
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -153,7 +151,7 @@ export default function ContactPage() {
               </svg>
             </a>
             <a
-              href="https://www.linkedin.com/in/ayesha-mughal-0421b6264/"
+              href="https://github.com/CodeVoyager007"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gold"
