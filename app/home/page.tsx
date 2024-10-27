@@ -6,7 +6,7 @@ import Link from "next/link"; // Import Link from next/link
 
 const phrases = [
   "🤞Begin Your Coding Journey...",
-  "✨ Get Cheat Sheets, Code Snippets...",
+  "✨ Get Video Tutorials, Certified Courses...",
   "🎉 Watch Video Tutorials...",
   "🚀 Certified Courses at Your Fingertips...",
 ];

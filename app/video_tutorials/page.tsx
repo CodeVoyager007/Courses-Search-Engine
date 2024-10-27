@@ -4,7 +4,7 @@ const VideoTutorials: React.FC = () => {
   return (
     <div className="max-w-full mx-auto px-4 overflow-hidden bg-gradient-to-r from-[#A3EBB1] to-[#21B6A8] min-h-screen py-6">
       <div className="text-center py-6 rounded-lg shadow-md mb-8">
-        <h1 className="text-6xl font-bold mb-2 textwhite">Programming Tutorials</h1>
+        <h1 className="text-6xl font-bold mb-2 text-white">Programming Tutorials</h1>
         <p className="text-xl text-[#374151]">
           A selection of coding tutorials from popular channels like Code with
           Harry, Apna College, and more. Content is in Hindi and Urdu.

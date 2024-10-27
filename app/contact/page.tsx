@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { EnvelopeIcon, GlobeAltIcon } from "@heroicons/react/24/solid";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,16 +13,18 @@ export default function ContactPage() {
     message: "",
   });
   const [typedText, setTypedText] = useState("");
-  const phrases = [
+
+  // Use useMemo to memoize phrases
+  const phrases = useMemo(() => [
     "❓ Have Questions?",
     "✨ Want to give suggestions.",
     "🎉 Want to know more about any course.",
     "🚀 Feel free to reach out!",
-  ];
+  ], []); // Empty dependency array to ensure stability
 
-  const typingDelay = 50;
-  const deletingDelay = 30;
-  const pauseBeforeDeleting = 1000;
+  const typingDelay = 100; // Typing delay
+  const deletingDelay = 50; // Deleting delay
+  const pauseBeforeDeleting = 1000; // Pause before deleting
 
   useEffect(() => {
     let currentPhraseIndex = 0;
@@ -63,7 +65,7 @@ export default function ContactPage() {
 
     // Cleanup function to clear timeout on component unmount
     return () => clearTimeout(timeoutId);
-  }, [phrases, typingDelay, deletingDelay, pauseBeforeDeleting]);
+  }, [phrases]); // Now, phrases is stable and does not change between renders
 
   const handleChange = (e: { target: { name: string; value: string } }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -151,15 +153,7 @@ export default function ContactPage() {
               </svg>
             </a>
             <a
-              href="mailto:ayeshamughal2162@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gold"
-            >
-              <EnvelopeIcon className="h-6 w-6" />
-            </a>
-            <a
-              href="https://github.com/CodeVoyager007"
+              href="https://www.linkedin.com/in/ayesha-mughal-0421b6264/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gold"

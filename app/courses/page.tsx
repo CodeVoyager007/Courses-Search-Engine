@@ -49,7 +49,7 @@ const CourseSection = () => {
             </CardHeader>
             <CardContent className="flex-grow">
               <p className="text-sm md:text-base text-[#374151]">
-                🎓 Dive into Harvard&apos;s CS50 Series! 🎓 Unlock the fundamentals of computer science with Harvard&apos;s CS50 lineup of free courses. Covering Web Programming, AI, and more, these courses bring top-tier knowledge in an accessible format. Learn and apply real-world skills with Harvard’s renowned teaching approach. 💻🌍
+                🎓 Dive into Harvard&apos;s CS50 Series! 🎓 Unlock the fundamentals of computer science with Harvard&apos;s CS50 lineup of free courses. Covering Web Programming, AI, and more, these courses bring top-tier knowledge in an accessible format. Learn and apply real-world skills with Harvard’s renowned teaching approach.These are non-commercial courses. 💻🌍
               </p>
               <Button onClick={() => setSelectedCourse(selectedCourse === "harvard" ? null : "harvard")} className="mt-2 w-full md:w-auto bg-[#1E3A8A] text-white hover:bg-[#B21368]">
                 {selectedCourse === "harvard" ? "Hide CS50 Courses" : "View Harvard CS50 Courses"}
