@@ -17,7 +17,7 @@ const BlogPage = () => {
   const fetchData = async () => {
     try {
       const newsResponse = await fetch(
-        `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=fc20faf375074c09bbb4e3e21e429bcc`
+        `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=126457c4b51548baaab61e1e1651aa1e`
       );
 
       if (!newsResponse.ok) {

@@ -3,18 +3,26 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   images: {
     domains: [
+      'assets-prd.ignimgs.com',
       'techcrunch.com',
-      'i.insider.com', // Add this domain
-      'gizmodo.com',
-      'opengraph.githubassets.com',
-      'thingspool.net',
-      'zverok.space',
-      'dillonshook.com',
-      's.yimg.com',
-      // Add any other relevant domains here
+      'uploads.dailydot.com',
+      'assetsio.gnwcdn.com',
+      'www.bleepstatic.co',
+      'www.bleepstatic.com',
+      'www.sciencealert.com',
+      'imageio.forbes.com',
+      'cdn.wccftech.com',
+      'cdn.videocardz.com',
+      'cdn.mos.cms.futurecdn.net',
+      'bnetcmsus-a.akamaihd.net',
+      'daringfireball.net',
+      'i0.wp.com',
+      'bgr.com',
+      'www.androidauthority.com',
+      'www.gamespot.com',
+      'platform.polygon.com' // Added domain here
     ],
   },
-  // other configurations
 };
 
 export default nextConfig;
