@@ -159,8 +159,11 @@ export default function ContactPage() {
               <GlobeAltIcon className="h-6 w-6" />
             </a>
           </div>
+          
+          
         </div>
       </div>
+      <h1 className="text-2xl">Made wih ❤️ by Ayesha Mughal</h1>
     </div>
   );
 }
